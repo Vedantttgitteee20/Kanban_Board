@@ -1,0 +1,12 @@
+.outer{
+    flex: 1;
+    width:100%;
+    padding: 20px;
+    overflow-x: auto;
+    background-color: #f4f5f8;
+  }
+.boards{
+    min-width: fit-content;
+    display: flex;
+    gap: 30px;
+  }
