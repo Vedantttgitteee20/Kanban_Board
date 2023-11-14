@@ -1,9 +1,41 @@
 .board{
     min-width: 270px;
 }
-.boardTop{
-
+.board .boardTop{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2px;
+    margin-right: -12px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-.boardTopTitle{
-
+.board .boardTop .leftBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.board .boardTopIcon{ 
+    color: '#40454b'; 
+    font-size: '12px'; 
+    margin-right: '5px';
+}
+.board .boardTopTitle{
+    margin-left: 10px;
+    font-size: small;
+    font-weight: 400;
+}
+.board .boardTopCount{
+    margin-left: 10px;
+    font-size: small;
+    font-weight: 300;
+}
+.board .boardTop .rightBox{
+    display: flex;
+    flex-direction: row;
+}
+.Icon{ 
+    color: '#939599';
+    font-size: '10px';
+    /* margin-left: '10px';
+    margin-right: '10px'; */
 }

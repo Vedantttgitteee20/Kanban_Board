@@ -1,13 +1,15 @@
+import React from 'react';
+import Styles from '../css/Cards.module.css';
+// import Avatar from './Avatar';
 
-import Styles from '../css/Cards.module.css'
-
-const Cards = (props) => {
+const Card = ({ ticket }) => {
   return (
     <div className={Styles.card}>
-      <div className={Styles.cardId}>{props.id}</div>
-      <div className={Styles.cardTitle}>{props.title}</div>
+      <div className={Styles.cardId}>{ticket.id}</div>
+      <div className={Styles.cardTitle}>{ticket.title}</div>
+      
     </div>
   );
-}
+};
 
-export default Cards;
+export default Card;
