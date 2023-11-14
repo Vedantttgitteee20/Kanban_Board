@@ -2,7 +2,7 @@
 import React from 'react';
 import Styles from '../css/Avatar.module.css';
 
-const Avatar = ({ username }) => {
+const Avatar = ({ username, style }) => {
   // Extract initials from the username
   const initials = username
     .split(' ')
@@ -10,7 +10,7 @@ const Avatar = ({ username }) => {
     .join('');
 
   return (
-    <div className={Styles.avatar}>
+    <div className={Styles.avatar} style={style}>
       {initials}
     </div>
   );

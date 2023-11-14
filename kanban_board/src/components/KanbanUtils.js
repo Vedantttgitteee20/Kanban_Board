@@ -1,5 +1,6 @@
 // KanbanUtils.js
-
+import { fetchData } from "./api";
+import { useState, useEffect } from "react";
 export const getBoardNameByStatus = (status) => {
   const statusNames = {
     'Todo': 'To Do',
@@ -91,3 +92,28 @@ export const getUserNameById = (tickets, userId) => {
   const user = tickets.users.find((user) => user.id === userId);
   return user ? user.name : 'Unknown User';
 };
+export const useTicketsData = () => {
+  const [tickets, setTickets] = useState([]);
+
+  useEffect(() => {
+    fetchData().then((data) => setTickets(data));
+  }, []);
+
+  return tickets;
+};
+
+export const useUserNameByIdOnly = (userId) => {
+  const tickets = useTicketsData();
+
+  // Check if tickets or tickets.users is undefined
+  if (!tickets || !tickets.users) {
+    return 'Loading...'; // or handle loading state accordingly
+  }
+
+  const user = tickets.users.find((user) => user.id === userId);
+  return user ? user.name : 'Unknown User';
+};
+
+
+
+

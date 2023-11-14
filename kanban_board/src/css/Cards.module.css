@@ -2,18 +2,39 @@
     width:100%;
     height: 80px;
     margin-top: 10px;
-    padding: 10px;
+    padding: 12px;
     background-color: white;
+    border-radius: 6px;
+    border-color: #939599;
+    position: relative;
 }
-.card .cardId{
+.avatar{
+    position: absolute;
+    right:10px;
+    top:15px;
+}
+.card .id{
     color: #727376;
     font-size: small;
     font-weight: 480;
 }
-.card .cardTitle{
+.card .title{
     font-size: 14px;
     font-weight: 500;
     width: 80%;
-    max-height: 40px;
+    height: 40px;
     overflow-y: hidden;
+}
+.midBox{
+    display: flex;
+    flex-direction: row;
+}
+.midBox .statusIcon{
+    margin-right: 5px;
+}
+.bottomBox{
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

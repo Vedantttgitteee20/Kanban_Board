@@ -3,7 +3,7 @@ import Styles from '../css/Boards.module.css'
 import Cards from './Cards';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { SlOptions } from "react-icons/sl";
-const Boards = ({boardName,tickets,icon}) => {
+const Boards = ({boardName,tickets,icon,displayOption}) => {
   return (
     <div className={Styles.board}>
         <div className={Styles.boardTop}>
@@ -28,7 +28,7 @@ const Boards = ({boardName,tickets,icon}) => {
         <div className='Cards'>
           {/* <Cards title= "Update User Profile Page UI" name="Vedant Gitte" id="Cam-11"/> */}
           {tickets?.map((ticket) => (
-            <Cards ticket={ticket} />
+            <Cards key={ticket.id} ticket={ticket} displayOption={displayOption}/>
           ))}
           {/* <Cards /> */}
         </div>
