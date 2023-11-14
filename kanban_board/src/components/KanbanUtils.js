@@ -3,7 +3,7 @@ import { fetchData } from "./api";
 import { useState, useEffect } from "react";
 export const getBoardNameByStatus = (status) => {
   const statusNames = {
-    'Todo': 'To Do',
+    'Todo': 'Todo',
     'In progress': 'In Progress',
     'Backlog': 'Backlog',
     'Done': 'Done',

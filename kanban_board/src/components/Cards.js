@@ -4,8 +4,8 @@ import Avatar from './Avatar';
 import {priorityIcons ,statusIcons} from './IconFunctions'
 import { FeaturedBox } from './FeaturedBox';
 import { useUserNameByIdOnly } from './KanbanUtils';
+
 const Card = ({ ticket, displayOption }) => {
-  // console.log(ticket)
   const user=useUserNameByIdOnly(ticket.userId)
   return (
     <div className={Styles.card}>
